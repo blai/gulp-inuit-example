@@ -2,6 +2,7 @@
   "name": "gulp-inuit-example",
   "private": true,
   "dependencies": {
+    "inuit-block": "latest",
     "inuit-box": "latest",
     "inuit-box-sizing": "latest",
     "inuit-buttons": "latest",
@@ -19,7 +20,7 @@
     "inuit-list-ui": "latest",
     "inuit-media": "latest",
     "inuit-mixins": "latest",
-    "inuit-normalize.css": "latest",
+    "inuit-pack": "latest",
     "inuit-page": "latest",
     "inuit-paragraphs": "latest",
     "inuit-print": "latest",

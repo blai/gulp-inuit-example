@@ -1,0 +1,13 @@
+$inuit-block-namespace:     $inuit-namespace !default;
+$inuit-block-gutter:            $inuit-base-spacing-unit !default;
+$inuit-block-gutter--tiny:        quarter($inuit-block-gutter) !default;
+$inuit-block-gutter--small:         halve($inuit-block-gutter) !default;
+$inuit-block-gutter--large:        double($inuit-block-gutter) !default;
+$inuit-block-gutter--huge:      quadruple($inuit-block-gutter) !default;
+$inuit-enable-block--flush:     true !default;
+$inuit-enable-block--tiny:      true !default;
+$inuit-enable-block--small:     true !default;
+$inuit-enable-block--large:     true !default;
+$inuit-enable-block--huge:      true !default;
+$inuit-enable-block--center:    true !default;
+$inuit-enable-block--right:     true !default;

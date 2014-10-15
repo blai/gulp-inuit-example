@@ -1,0 +1,14 @@
+$inuit-media-namespace:             $inuit-namespace !default;
+$inuit-media-gutter:                $inuit-base-spacing-unit !default;
+$inuit-media-gutter--tiny:            quarter($inuit-media-gutter) !default;
+$inuit-media-gutter--small:             halve($inuit-media-gutter) !default;
+$inuit-media-gutter--large:            double($inuit-media-gutter) !default;
+$inuit-media-gutter--huge:          quadruple($inuit-media-gutter) !default;
+$inuit-enable-media--tiny:          true !default;
+$inuit-enable-media--small:         true !default;
+$inuit-enable-media--large:         true !default;
+$inuit-enable-media--huge:          true !default;
+$inuit-enable-media--rev:           true !default;
+$inuit-enable-media--flush:         true !default;
+$inuit-enable-media--responsive:    true !default;
+$inuit-media-collapse-at:           720px !default;

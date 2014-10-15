@@ -3,6 +3,7 @@
 
 var gulp = require('gulp');
 var mainBowerFiles = require('main-bower-files');
+var del = require('del');
 // load plugins
 var $ = require('gulp-load-plugins')();
 
@@ -11,7 +12,8 @@ gulp.task('styles', function() {
     bowerrc: '.bowerrc'
   }).concat('app/styles/**/*.scss'), {
     read: false
-  });
+  })
+  .pipe($.filter('**/*.scss'));
 
   return $.inuit(stream, {
       name: 'main'
@@ -79,10 +81,8 @@ gulp.task('extras', function() {
     .pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', function() {
-  return gulp.src(['.tmp', 'dist'], {
-    read: false
-  }).pipe($.clean());
+gulp.task('clean', function(done) {
+  del(['.tmp', 'dist'], done);
 });
 
 gulp.task('build', ['html', 'images', 'fonts', 'extras']);
@@ -127,6 +127,13 @@ gulp.task('wiredep', function() {
       directory: 'app/bower_components'
     }))
     .pipe(gulp.dest('app'));
+});
+
+gulp.task('customize-inuit', function () {
+  return gulp.src(mainBowerFiles())
+    .pipe($.inuit.variables())
+    .pipe($.conflict('app/styles/customize'))
+    .pipe(gulp.dest('app/styles/customize'));
 });
 
 gulp.task('watch', ['connect', 'serve'], function() {

@@ -1,0 +1,15 @@
+$inuit-btn-namespace:       $inuit-namespace !default;
+$inuit-btn-padding:         halve($inuit-base-spacing-unit) !default;
+$inuit-btn-padding--small:  halve($inuit-btn-padding) !default;
+$inuit-btn-padding--large:  double($inuit-btn-padding) !default;
+$inuit-btn-background:      #4a8ec2 !default;
+$inuit-btn-color:           #fff !default;
+$inuit-btn-border-width:    1px !default;
+$inuit-btn-border-style:    solid !default;
+$inuit-btn-border-color:    $inuit-btn-background !default;
+$inuit-btn-radius:          0 !default;
+$inuit-enable-btn--small:   true !default;
+$inuit-enable-btn--large:   true !default;
+$inuit-enable-btn--full:    true !default;
+$inuit-enable-btn--pill:    true !default;
+$inuit-global-border-box: false !default;

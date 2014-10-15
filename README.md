@@ -1,21 +1,28 @@
 # gulp-inuit-example
 
-This sample project is generated using [generator-gulp-webapp](https://github.com/yeoman/generator-gulp-webapp), with the only modification being the `styles` task inside `gulpfile.js`, and some additional `.scss` files to show how `gulp-inuit` work.
+This sample project is generated using [generator-gulp-webapp](https://github.com/yeoman/generator-gulp-webapp). It has the following modifications:
 
-It packages all the Inuit components listed under [here](https://github.com/inuitcss), through bower dependency specified in `bower.json`.
-
-Any local style implementation should take place under `app/styles/`. You can add/remove any `.scss` file there and expect the `gulp-inuit` plugin to handle the sorting according to the [Inuit Getting started guide](https://github.com/inuitcss/getting-started#import-order). If your `.scss` file name begines with `_customize.` (or `customize.`), it would be imported before all default Inuit sections, this allows you to override the variables provided by various Inuit modules. If your `.scss` file name does not contain any recognizable Inuit section name (or `_customzie.`), it will be imported at last.
+* `style` task inside `gulpfile.js` is change to use `gulp-inuit`.
+* added `customize-inuit` task, which, when you run `gulp customize-inuit`, will generate a set of `_customize.section.module.scss` files under `app/styles/customize`. `_customize.settings.default.scss` is customized to show case the customization actually works, all Inuit module features are turned on.
+* `app/index.html` is filled with a kitchen sink like tests for all the styles Inuit affects.
+* Added all Inuit components listed under [here](https://github.com/inuitcss), through bower dependency specified in `bower.json`.
 
 ## See it in action
+
+### Run kitchen sink test
 
 ```
 git clone git@github.com:blai/gulp-inuit-example.git
 cd gulp-inuit-example
 npm install
 bower install
-gulp serve
+gulp watch
 ```
 
-Running the above would launch a web page with some default contents, plus some demo stylings in `app/styles/`. You should also be able to find the aggregated `.scss` main file under `.tmp/styles/main.scss`, the compiled file is `main.css`.
+### Try the `customize-inuit` task
 
-You can also add/remove any Inuit modules using bower, and rerun the command to see the changes.
+```
+gulp customize-inuit
+```
+
+Since I have run this command once checked in the generated files, when you run this command, a command prompt would be displayed for those files that I have changed, this shows you how you can safely run the command over and over again, even after you have modified the `_customize...scss` files (think: when you update an Inuit module, and the update introduced new variables).

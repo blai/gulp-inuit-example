@@ -1,0 +1,14 @@
+$inuit-pack-namespace:      $inuit-namespace !default;
+$inuit-pack-gutter:         $inuit-base-spacing-unit !default;
+$inuit-pack-gutter--tiny:     quarter($inuit-pack-gutter) !default;
+$inuit-pack-gutter--small:      halve($inuit-pack-gutter) !default;
+$inuit-pack-gutter--large:     double($inuit-pack-gutter) !default;
+$inuit-pack-gutter--huge:   quadruple($inuit-pack-gutter) !default;
+$inuit-enable-pack--auto:   true !default;
+$inuit-enable-pack--tiny:   true !default;
+$inuit-enable-pack--small:  true !default;
+$inuit-enable-pack--large:  true !default;
+$inuit-enable-pack--huge:   true !default;
+$inuit-enable-pack--rev:    true !default;
+$inuit-enable-pack--middle: true !default;
+$inuit-enable-pack--bottom: true !default;

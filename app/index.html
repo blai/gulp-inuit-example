@@ -1,53 +1,482 @@
 <!doctype html>
 <html class="no-js">
-    <head>
-        <meta charset="utf-8">
-        <title>gulp inuit example</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css styles/vendor.css -->
-        <!-- bower:css -->
-        <!-- endbower -->
-        <!-- endbuild -->
+<head>
+  <meta charset="utf-8">
+  <title>Inuit kitchen sink test</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+  <!-- build:css styles/vendor.css -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- endbuild -->
 
-    </head>
-    <body>
-        <!--[if lt IE 10]>
+  <!-- build:css styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body>
+  <!--[if lt IE 10]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <div class="hero-unit">
-            <h1>'Allo, 'Allo!</h1>
-            <p>You now have</p>
-            <ul>
-                <li>HTML5 Boilerplate</li>
-                <li>Sass</li>
-            </ul>
+  <section>
+    <h4>hgroup, h1-h6, main, article, nav</h4>
+    <main>
+      <hgroup>
+        <h1>main hgroup: h1</h1>
+        <h2>main hgroup: h2</h2>
+        <h3>main hgroup: h3</h3>
+        <h4>main hgroup: h3</h4>
+        <h5>main hgroup: h5</h5>
+        <h6>main hgroup: h6</h6>
+      </hgroup>
+
+      <hgroup>
+        <div class="alpha">.alpha</div>
+        <div class="beta">.beta</div>
+        <div class="gamma">.gamma</div>
+        <div class="delta">.delta</div>
+        <div class="epsilon">.epsilon</div>
+        <div class="zeta">.zeta</div>
+      </hgroup>
+
+      <article>
+        <p class="lede"><b>lede</b> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto, assumenda.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </article>
+
+      <article>
+        <h4>article: details, summary</h4>
+        <details>
+          <summary>summary</summary>
+          <p>p: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente, eum!</p>
+        </details>
+      </article>
+
+      <article>
+        <h4>article: aside</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam ducimus modi fugit.</p>
+        <aside>
+          <h5>aside h5</h5>
+          <p>aside p: Lorem ipsum dolor sit amet.</p>
+        </aside>
+      </article>
+
+      <article>
+        <h4>article: figure, figcaption</h4>
+        <figure>
+          <img src="http://lorempixel.com/400/200" alt="400x200">
+          <figcaption>lorempixel.com/400/200</figcaption>
+        </figure>
+      </article>
+    </main>
+    <nav>
+      <a href="http://bower.io">bower.io</a> |
+      <a href="http://yeoman.io">yeoman.io</a>
+    </nav>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>audio, canvas, progress, video</h4>
+    <audio controls>
+      <source src="http://www.w3schools.com/tags/horse.ogg" type="audio/ogg"></source>
+      <source src="http://www.w3schools.com/tags/horse.mp3" type="audio/mpeg"></source>
+      Your browser does not support audio tag
+    </audio>
+    <canvas width="200" height="100" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+    <progress value="20" max="100">20/100</progress>
+    <video width="320" height="240" controls>
+      <source src="http://www.w3schools.com/tags/movie.mp4" type="video/mp4">
+        <source src="http://www.w3schools.com/tags/movie.ogg" type="video/ogg">
+          Your browser does not support the video tag.
+    </video>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>audio:not([controls]), [hidden], template</h4>
+    <audio src="http://www.w3schools.com/tags/horse.ogg"></audio>
+    <div hidden>hidden</div>
+    <template>hidden</template>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>abbr[title], b, strong, em, dfn, pre, code, samp, kbd, var, mark, blockquote, address</h4>
+    <abbr>abbr without title</abbr>|
+    <abbr title="Abbreviation">abbr with title</abbr>
+    <br>
+    <em>Emphasized text</em>
+    <br>
+    <strong>Strong text</strong>
+    <br>
+    <b>Bold text</b>
+    <br>
+    <dfn>Definition term without title</dfn>|
+    <dfn title="Definition detail">Definition with Title</dfn>
+    <br>
+    <code>A piece of computer code</code>
+    <br>
+    <pre>pre
+    formatted</pre>
+    <br>
+    <pre>some
+    code</pre>
+    <br>
+    <samp>Sample output from a computer program</samp>
+    <br>
+    <kbd>Keyboard input</kbd>
+    <br>
+    <var>Variable</var>
+    <br>
+    <mark>Mark</mark>
+    <br>
+    <blockquote>blockquote</blockquote>
+    <br>
+    <address>address: 123 abc st, xyz city, AA, ZZZ</address>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>small, sub, sup, ins, del</h4>
+    <h1>h1
+      <small>small</small>
+    </h1>
+    <h2>h2
+      <small>small</small>
+    </h2>
+    <h3>h3
+      <small>small</small>
+    </h3>
+    <h4>h4
+      <small>small</small>
+    </h4>
+    <h5>h5
+      <small>small</small>
+    </h5>
+    <h6>h6
+      <small>small</small>
+    </h6>
+    <p>Lorem ipsum dolor sit amet,
+      <small>small</small>consectetur adipisicing elit. Vel <sub>sub</sub> inventore nulla suscipit aut expedita in ullam, perferendis <sup>sup</sup> itaque
+      <ins>ins</ins>deserunt
+      <del>del</del>pariatur.</p>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>form</h4>
+    <button>button</button>
+    <div class="btn">btn</div>
+    <button class="btn">button.btn</button>
+    <br>button:
+    <input type="button">
+    <input type="button" disabled>
+    <br>checkbox:
+    <input type="checkbox">
+    <input type="checkbox" checked>
+    <input type="checkbox" disabled>
+    <input type="checkbox" checked disabled>
+    <br>color:
+    <input type="color">
+    <input type="color" disabled>
+    <br>date:
+    <input type="date">
+    <input type="date" disabled>
+    <br>datetime:
+    <input type="datetime">
+    <input type="datetime" disabled>
+    <br>datetime-local:
+    <input type="datetime-local">
+    <input type="datetime-local" disabled>
+    <br>email:
+    <input type="email">
+    <input type="email" disabled>
+    <br>file:
+    <input type="file">
+    <input type="file" disabled>
+    <br>hidden:
+    <input type="hidden">
+    <input type="hidden" disabled>
+    <br>image:
+    <input type="image">
+    <input type="image" disabled>
+    <br>month:
+    <input type="month">
+    <input type="month" disabled>
+    <br>number:
+    <input type="number">
+    <input type="number" disabled>
+    <br>password:
+    <input type="password">
+    <input type="password" disabled>
+    <br>radio:
+    <input type="radio">
+    <input type="radio" checked>
+    <input type="radio" disabled>
+    <input type="radio" checked disabled>
+    <br>range:
+    <input type="range">
+    <input type="range" disabled>
+    <br>reset:
+    <input type="reset">
+    <input type="reset" disabled>
+    <br>search:
+    <input type="search">
+    <input type="search" disabled>
+    <br>submit:
+    <input type="submit">
+    <input type="submit" disabled>
+    <br>tel:
+    <input type="tel">
+    <input type="tel" disabled>
+    <br>text:
+    <input type="text">
+    <input type="text" disabled>
+    <br>time:
+    <input type="time">
+    <input type="time" disabled>
+    <br>url:
+    <input type="url">
+    <input type="url" disabled>
+    <br>week:
+    <input type="week">
+    <input type="week" disabled>
+    <br>select:
+    <select name="" id="">
+      <optgroup label="Swedish Cars">
+        <option value="volvo">Volvo</option>
+        <option value="saab">Saab</option>
+      </optgroup>
+      <optgroup label="German Cars">
+        <option value="mercedes">Mercedes</option>
+        <option value="audi">Audi</option>
+      </optgroup>
+    </select>
+    <br>textarea:
+    <textarea name="" id="" cols="30" rows="4">cols=30, rows=4</textarea>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>fieldset, legend</h4>
+    <fieldset>
+      <legend>legend</legend>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem, ducimus.</p>
+    </fieldset>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>flag, flag__img, flag__body</h4>
+    <h6>big image, small content</h6>
+    <div class="flag">
+      <div class="flag__img">
+        <img src="http://lorempixel.com/200/180">
+      </div>
+      <div class="flag__body">The flag object module is an object similar in appearance to the media object, but which provides slightly more advanced functionality.</div>
+    </div>
+    <br>
+    <h6>small image, big content</h6>
+    <div class="flag">
+      <div class="flag__img">
+        <img src="http://lorempixel.com/120/80">
+      </div>
+      <div class="flag__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos cumque illum iste consequatur magnam blanditiis incidunt porro laboriosam sapiente nulla similique neque accusantium dolorem error reprehenderit quidem autem temporibus numquam ea tempora nam, possimus. Autem vel, voluptatem, magnam quibusdam temporibus eos id dolor nobis perferendis unde accusantium ab quaerat repudiandae modi esse quae ipsam rem a impedit aperiam sapiente voluptatibus illum explicabo. Quisquam consectetur in nemo harum modi minus, enim alias optio. Tenetur mollitia deserunt voluptatem voluptatum voluptate optio ducimus!</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>.list-bare</h4>
+    <ul class="list-bare">
+      <li>ul: Lorem ipsum dolor.</li>
+      <li>ul: Lorem ipsum dolor.</li>
+    </ul>
+    <br>
+    <ol class="list-bare">
+      <li>ol: Lorem ipsum dolor.</li>
+      <li>ol: Lorem ipsum dolor.</li>
+    </ol>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>.list-block, .list-block__item, .list-block > li</h4>
+    <ol class="list-block">
+      <li>ol > li</li>
+      <div class="list-block__item">ol > div.list-block__item</div>
+    </ol>
+    <br>
+    <ul class="list-block">
+      <li>ul > li</li>
+      <div class="list-block__item">ul > div.list-block__item</div>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>.list-inline, .list-inline > li</h4>
+    <ol class="list-inline">
+      <li>ol > li</li>
+      <li>ol > li</li>
+    </ol>
+    <br>
+    <ul class="list-inline">
+      <li>ul > li</li>
+      <li>ul > li</li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>.list-ui, .list-ui__item, .list-ui > li</h4>
+    <ol class="list-ui">
+      <li>ol > li</li>
+      <div class="list-ui__item">ol > div.list-ui__item</div>
+    </ol>
+    <br>
+    <ul class="list-ui">
+      <li>ul > li</li>
+      <div class="list-ui__item">ul > div.list-ui__item</div>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>.media, .media__img, .media__body</h4>
+    <ul class="list-bare">
+      <li class="media">
+        <img src="http://lorempixel.com/150/80" alt="" class="media__img">
+        <article class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt aperiam distinctio laboriosam voluptates totam sit saepe cum blanditiis minima voluptatem suscipit culpa, impedit expedita, ratione, quos numquam ipsam recusandae ea.</article>
+      </li>
+      <li class="media">
+        <img src="http://lorempixel.com/150/80" alt="" class="media__img">
+        <article class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore nulla hic deleniti! Corporis iusto quidem, repellat beatae quam ullam neque saepe ad.</article>
+      </li>
+      <li class="media">
+        <img src="http://lorempixel.com/150/80" alt="" class="media__img">
+        <article class="media__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, ducimus sapiente. Autem deserunt temporibus ipsa impedit delectus quia fugiat nihil molestias eos doloribus, architecto, aperiam distinctio voluptatum error soluta inventore eligendi atque. Fugiat iure blanditiis beatae inventore incidunt cum. Numquam doloribus modi repudiandae, ratione doloremque earum odit dolor asperiores sint.</article>
+      </li>
+    </ul>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>.pack, .block, .block__body, .block__img</h4>
+    <div class="pack">
+      <div class="pack__item">
+        <div class="block box">
+          <img src="http://lorempixel.com/200/100" alt="" class="block__img">
+          <p class="block__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, voluptates.</p>
         </div>
+      </div>
+      <div class="pack__item">
+        <div class="block box">
+          <img src="http://lorempixel.com/200/100" alt="" class="block__img">
+          <p class="block__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, voluptates.</p>
+        </div>
+      </div>
+      <div class="pack__item">
+        <div class="block box">
+          <img src="http://lorempixel.com/200/100" alt="" class="block__img">
+          <p class="block__body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi, voluptates.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
-        <script>
-            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
-            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
-            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
-            e.src='//www.google-analytics.com/analytics.js';
-            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
-            ga('create','UA-XXXXX-X');ga('send','pageview');
-        </script>
+  <section>
+    <h4>.tabs, .tabs__item, tabs__link</h4>
+    <ul class="tabs">
+      <li class="tabs__item">.tabs__item</li>
+      <li class="tabs__link">.tabs__link</li>
+      <li class="tabs__item">.tabs__item</li>
+    </ul>
+  </section>
 
-        <!-- build:js scripts/vendor.js -->
-        <!-- bower:js -->
-        <!-- endbower -->
-        <!-- endbuild -->
+  <hr>
 
-        <!-- build:js scripts/main.js -->
-        <script src="scripts/main.js"></script>
-        <!-- endbuild -->
+  <section>
+    <h4>.box, .box > :last-child</h4>
+    <div class="box">
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, dignissimos.</div>
+      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem, dignissimos.</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>grid: .layout, .layout__item, .trumps.widths
+      <small>(division by 7 and 11 are not available)</small>
+    </h4>
+    <small>there can not be any physical character between the html element of layout__item that is acting as a grid column, newline or empty space will render as a gap between columns</small>
+    <div class="layout layout-flush">
+      <div class="layout__item 1/1">1/1</div>
+      <div class="layout__item 1/2">1/2</div><div class="layout__item 1/2">1/2</div>
+      <div class="layout__item 1/3">1/3</div><div class="layout__item 1/3">1/3</div><div class="layout__item 1/3">1/3</div>
+      <div class="layout__item 1/4">1/4</div><div class="layout__item 1/4">1/4</div><div class="layout__item 1/4">1/4</div><div class="layout__item 1/4">1/4</div>
+      <div class="layout__item 1/5">1/5</div><div class="layout__item 1/5">1/5</div><div class="layout__item 1/5">1/5</div><div class="layout__item 1/5">1/5</div><div class="layout__item 1/5">1/5</div>
+      <div class="layout__item 1/6">1/6</div><div class="layout__item 1/6">1/6</div><div class="layout__item 1/6">1/6</div><div class="layout__item 1/6">1/6</div><div class="layout__item 1/6">1/6</div><div class="layout__item 1/6">1/6</div>
+      <div class="layout__item 1/8">1/8</div><div class="layout__item 1/8">1/8</div><div class="layout__item 1/8">1/8</div><div class="layout__item 1/8">1/8</div><div class="layout__item 1/8">1/8</div><div class="layout__item 1/8">1/8</div><div class="layout__item 1/8">1/8</div><div class="layout__item 1/8">1/8</div>
+      <div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div><div class="layout__item 1/9">1/9</div>
+      <div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div><div class="layout__item 1/10">1/10</div>
+      <div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div><div class="layout__item 1/12">1/12</div>
+      <div class="layout__item 2/4">2/4</div><div class="layout__item 2/4">2/4</div><div class="layout__item 2/6">2/6</div><div class="layout__item 2/6">2/6</div><div class="layout__item 2/6">2/6</div><div class="layout__item 2/8">2/8</div><div class="layout__item 2/8">2/8</div><div class="layout__item 2/8">2/8</div><div class="layout__item 2/8">2/8</div>
+      <div class="layout__item 2/10">2/10</div><div class="layout__item 2/10">2/10</div><div class="layout__item 2/10">2/10</div><div class="layout__item 2/10">2/10</div><div class="layout__item 2/10">2/10</div>
+      <div class="layout__item 2/12">2/12</div><div class="layout__item 2/12">2/12</div><div class="layout__item 2/12">2/12</div><div class="layout__item 2/12">2/12</div><div class="layout__item 2/12">2/12</div><div class="layout__item 2/12">2/12</div>
+      <div class="layout__item 2/3">2/3</div><div class="layout__item 1/3">1/3</div>
+      <div class="layout__item 3/4">3/4</div><div class="layout__item 1/4">1/4</div>
+      <div class="layout__item 4/5">4/5</div><div class="layout__item 1/5">1/5</div>
+      <div class="layout__item 3/5">3/5</div><div class="layout__item 2/5">2/5</div>
+      <div class="layout__item 5/6">5/6</div><div class="layout__item 1/6">1/6</div>
+      <div class="layout__item 7/8">7/8</div><div class="layout__item 1/8">1/8</div>
+      <div class="layout__item 5/8">5/8</div><div class="layout__item 3/8">3/8</div>
+      <div class="layout__item 8/9">8/9</div><div class="layout__item 1/9">1/9</div>
+      <div class="layout__item 7/9">7/9</div><div class="layout__item 2/9">2/9</div>
+      <div class="layout__item 5/9">5/9</div><div class="layout__item 4/9">4/9</div>
+      <div class="layout__item 9/10">9/10</div><div class="layout__item 1/10">1/10</div>
+      <div class="layout__item 7/10">7/10</div><div class="layout__item 3/10">3/10</div>
+      <div class="layout__item 11/12">11/10</div><div class="layout__item 1/12">1/12</div>
+      <div class="layout__item 7/12">7/12</div><!-- there can not be any physical character between layout__item that is a grid column, newline or empty space will render as a gap between columns
+   --><div class="layout__item 5/12">5/12</div>
+    </div>
+  </section>
+
+  <hr>
+
+  <section>
+    <h4>responsive grid</h4>
+
+  </section>
+
+  <!-- build:js scripts/vendor.js -->
+  <!-- bower:js -->
+  <!-- endbower -->
+  <!-- endbuild -->
+
+  <!-- build:js scripts/main.js -->
+  <script src="scripts/main.js"></script>
+  <!-- endbuild -->
 </body>
+
 </html>

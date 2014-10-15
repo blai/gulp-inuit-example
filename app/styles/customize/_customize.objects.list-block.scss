@@ -1,0 +1,10 @@
+$inuit-list-block-namespace:        $inuit-namespace !default;
+$inuit-list-block-padding:          $inuit-base-spacing-unit !default;
+$inuit-list-block-padding--tiny:      quarter($inuit-list-block-padding) !default;
+$inuit-list-block-padding--small:       halve($inuit-list-block-padding) !default;
+$inuit-list-block-padding--large:      double($inuit-list-block-padding) !default;
+$inuit-list-block-padding--huge:    quadruple($inuit-list-block-padding) !default;
+$inuit-enable-list-block--tiny:     true !default;
+$inuit-enable-list-block--small:    true !default;
+$inuit-enable-list-block--large:    true !default;
+$inuit-enable-list-block--huge:     true !default;
